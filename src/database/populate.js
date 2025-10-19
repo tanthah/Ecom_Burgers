@@ -21,6 +21,9 @@ var orders = fs
 var ordersItems = fs
   .readFileSync(path.join(__dirname, "ecommerce_orders_items.sql"))
   .toString();
+var user_tokens = fs
+  .readFileSync(path.join(__dirname, "ecommerce_user_tokens.sql"))
+  .toString();
 
 con = mysql.createConnection(config.populateCon);
 
@@ -41,6 +44,10 @@ populateDb(orders).then(() => {
 });
 populateDb(ordersItems).then(() => {
   console.log("Orders_items table create!");
+});
+
+populateDb(user_tokens).then(() => {
+  console.log("user_tokens table create!");
 });
 
 function populateDb(file) {

@@ -10,7 +10,7 @@ const config = {
     user: process.env.DATABASE_USER,
     password: process.env.DATABASE_PASS,
     database: process.env.DATABASE_NAME,
-    port: process.env.DATABASE_PORT, // thêm dòng này
+    port: process.env.DATABASE_PORT,
     charset: "utf8mb4",
   },
   populateCon: {
@@ -18,7 +18,7 @@ const config = {
     user: process.env.DATABASE_USER,
     password: process.env.DATABASE_PASS,
     database: process.env.DATABASE_NAME,
-    port: process.env.DATABASE_PORT, // thêm dòng này
+    port: process.env.DATABASE_PORT,
     charset: "utf8mb4",
     multipleStatements: true,
   },
